@@ -10,7 +10,7 @@
 <body>
     <p>This is a <?php echo "awesome"; ?> paragraph!</p>
     <?php
-    echo "This is ALSO a paragraph!";
+    echo "This is also a paragraph!";
     ?>
 </body>
 
