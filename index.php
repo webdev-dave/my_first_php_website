@@ -9,9 +9,13 @@
 
 <body>
     <?php
-    $name = "David";
+        echo $_SERVER["DOCUMENT_ROOT"];
+        echo "<br>";
+        echo $_SERVER["REQUEST_METHOD"];
+        echo "<br>";
+        echo $_FILES["name"];
     ?>
-    <p>Hi! my name is <?php echo $name?></p>
+
 </body>
 
 </html>
