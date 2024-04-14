@@ -13,6 +13,24 @@
     $a = 1;
     $b = 4;
 
+    switch($a) {
+        case 0:
+            echo "a equals 0";
+            break;
+        case 1:
+            echo "a equals 1";
+            break;
+        case 2:
+            echo "a equals 2";
+            break;
+        default: 
+        echo "None of the conditions were true";
+    }
+
+    ?>
+    <br>
+    <?php
+
     if($a < $b && !$bool){
         echo "First condition is true!";
     } else if ($a < $b && $bool){
