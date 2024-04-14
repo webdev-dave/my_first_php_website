@@ -9,11 +9,15 @@
 
 <body>
     <?php
-        echo $_SERVER["DOCUMENT_ROOT"];
-        echo "<br>";
-        echo $_SERVER["REQUEST_METHOD"];
-        echo "<br>";
-        echo $_FILES["name"];
+    $bool = true;
+    $a = 1;
+    $b = 4;
+
+    if($a < $b && !$bool){
+        echo "First condition is true!";
+    } else if ($a < $b && $bool){
+        echo "Second condition is true!";
+    }
     ?>
 
 </body>
