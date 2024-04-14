@@ -13,29 +13,36 @@
     $a = 1;
     $b = 4;
 
-    switch($a) {
-        case 0:
-            echo "a equals 0";
-            break;
-        case 1:
-            echo "a equals 1";
-            break;
-        case 2:
-            echo "a equals 2";
-            break;
-        default: 
-        echo "None of the conditions were true";
-    }
+    $result = match($a){
+        1 => "Variable a is equal to one!",
+        2,3,4,5 => "Variable a is equal to two, or three, or four, or five!",
+        //default output
+        default => "None were a match",
+    };
+    echo $result;
 
-    ?>
-    <br>
-    <?php
 
-    if($a < $b && !$bool){
-        echo "First condition is true!";
-    } else if ($a < $b && $bool){
-        echo "Second condition is true!";
-    }
+    // switch($a) {
+    //     case 0:
+    //         echo "a equals 0";
+    //         break;
+    //     case 1:
+    //         echo "a equals 1";
+    //         break;
+    //     case 2:
+    //         echo "a equals 2";
+    //         break;
+    //     default: 
+    //     echo "None of the conditions were true";
+    // }
+
+ 
+
+    // if($a < $b && !$bool){
+    //     echo "First condition is true!";
+    // } else if ($a < $b && $bool){
+    //     echo "Second condition is true!";
+    // }
     ?>
 
 </body>
