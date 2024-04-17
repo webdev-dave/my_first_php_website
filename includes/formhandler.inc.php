@@ -9,11 +9,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     try{
         require_once "./dbh.inc.php";
         
-        $query = "INSERT INTO users (username, pwd, email) VALUES (?, ?, ?);";
+        $query = "INSERT INTO users (username, pwd, email) VALUES (:username, :pwd, :email);";
 
         //send data to database
+        //named parameters
         $stmt = $pdo->prepare($query);
-        $stmt -> execute([$username, $pwd, $email]);
+        $stmt->bindParam(":username", $username);
+        $stmt->bindParam(":pwd", $pwd);
+        $stmt->bindParam(":email", $email);
+        $stmt -> execute();
+
+        //positional parameters:
+        //$query = "INSERT INTO users (username, pwd, email) VALUES (?, ?, ?);";
+        //$stmt -> execute([$username, $pwd, $email]);
 
 
         //send user back to the homepage once data has been submitted
